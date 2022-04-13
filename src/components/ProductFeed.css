@@ -1,0 +1,34 @@
+.productFeed {
+  display: grid;
+  grid-auto-flow: row dense;
+  margin-top: -4rem;
+}
+
+@media (min-width: 1280px) {
+  .productFeed {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .productFeed {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .productFeed {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-top: -10rem;
+
+    grid-column: 1 / -1;
+  }
+}
+
+/* @media (max-width: 1261px) {
+  .productFeed {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-top: 6rem;
+  }
+} */
