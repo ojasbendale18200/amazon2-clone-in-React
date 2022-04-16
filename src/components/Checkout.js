@@ -4,9 +4,11 @@ import Currency from "react-currency-formatter";
 import { useStateValue } from "./StateProvider";
 import { getCartTotal } from "../reducer";
 import CheckoutProduct from "./CheckoutProduct";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
   const [{ cart, user }, dispatch] = useStateValue();
+  const navigate = useNavigate();
   return (
     <div className="checkout">
       <main>
@@ -49,7 +51,9 @@ function Checkout() {
               <Currency quantity={getCartTotal(cart)} currency="INR" />
             </strong>
           </p>
-          <button>Proceed to Checkout</button>
+          <button onClick={() => navigate("/payment")}>
+            {!user ? "Sign In" : "Proceed to Checkout"}
+          </button>
         </div>
       </main>
     </div>

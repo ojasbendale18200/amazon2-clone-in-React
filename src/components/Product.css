@@ -9,6 +9,15 @@
   padding: 40px;
 }
 
+.product:hover {
+  transform: scale(1.05);
+  transition: transform 450ms ease-out;
+  box-shadow: 5.3px 8.2px 22.1px rgba(0, 0, 0, 0.62),
+    14.8px 22.8px 61px rgba(0, 0, 0, 0.404),
+    35.6px 54.9px 146.8px rgba(0, 0, 0, 0.31),
+    118px 182px 487px rgba(0, 0, 0, 0.216);
+}
+
 .product__title {
   margin-top: 12px;
   margin-bottom: 12px;
